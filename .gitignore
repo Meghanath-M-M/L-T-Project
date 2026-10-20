@@ -1,5 +1,12 @@
+# Raw + processed datasets are too large for GitHub; rebuild them with the notebooks
 data/*.tsv
 data/*.csv
 data/*.zip
 
+# Local-only training intermediate (~1 GB), rebuild with: python src/build_artifacts.py
+data/model_features.joblib
+
 .ipynb_checkpoints/
+__pycache__/
+.venv/
+venv/
