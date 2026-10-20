@@ -242,9 +242,7 @@ python src/predict.py     # prints a predicted price for a sample listing
 
 ## Deployment URL
 
-Streamlit Community Cloud: **_[paste your live app URL here after
-deploying — share.streamlit.io → Create app → main file path
-`app/app.py` (see below)]_**
+Streamlit Community Cloud: https://mercari-price-predictor.streamlit.app/
 
 Deployment steps: push this repository to GitHub, open
 <https://share.streamlit.io>, create an app pointing at
