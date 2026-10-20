@@ -1,7 +1,7 @@
 # Mercari Price Suggestion — L&T Project
 
 **Team members:** Meghanath, Sehal, Sabeel
-## Live Demo Link:https://mercari-price-predictor.streamlit.app/
+## Live Demo Link: https://mercari-price-predictor.streamlit.app/
 ## Problem statement
 
 Online marketplaces contain millions of listings with unstructured text
@@ -195,16 +195,21 @@ sample (kept small to avoid out-of-memory errors):
 `mlruns/` (committed to this repository as tracking evidence):
 
 - **Experiment:** `Mercari Price Suggestion`, run name `tuned-lightgbm`
+- **Registry:** SQLite metadata database `mlflow.db` at the repo root, with
+  parameters, metrics and run metadata stored there; the logged model
+  artifact lives under `mlruns/models/<model-id>/artifacts/`
 - **Logged parameters:** all seven tuned hyperparameters + seed settings
 - **Logged metrics:** `validation_mae`, `validation_rmse`, plus dataset
   shape metrics (`n_train_rows`, `n_valid_rows`, `n_features`)
-- **Logged artifact:** the trained LightGBM model (`tuned-lightgbm/`)
-- Run metadata (versions, timestamps, run id) is stored under `mlruns/`
+- **Logged artifact:** the trained LightGBM model (`model.skops` + `MLmodel`
+  metadata)
+- **Committed evidence:** `mlflow.db` (run `tuned-lightgbm`, status
+  `FINISHED`) and `mlruns/` are both tracked in this repository
 
 View the runs locally with:
 
 ```bash
-mlflow ui --backend-store-uri ./mlruns
+mlflow ui --backend-store-uri sqlite:///mlflow.db
 # then open http://localhost:5000
 ```
 
