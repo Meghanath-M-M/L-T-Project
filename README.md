@@ -1,7 +1,7 @@
 # Mercari Price Suggestion — L&T Project
 
 **Team members:** Meghanath, Sehal, Sabeel
-##Live Demo Link:https://mercari-price-predictor.streamlit.app/
+## Live Demo Link:https://mercari-price-predictor.streamlit.app/
 ## Problem statement
 
 Online marketplaces contain millions of listings with unstructured text
