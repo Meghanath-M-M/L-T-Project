@@ -3,6 +3,7 @@
 Machine-learning web app that suggests a marketplace price for a product listing
 from its name, category, brand, condition, shipping and description.
 
+## Team Members:Meghanath,Sehal,Sabeel
 ## How it works
 
 | Stage | Artifact | Built by |
